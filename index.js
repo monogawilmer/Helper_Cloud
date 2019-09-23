@@ -3,6 +3,8 @@ import morgan from 'morgan';
 import cors from 'cors';
 import path, { dirname } from 'path';
 import mongoose from 'mongoose';
+import router from './routes';
+
 
 //conexion a la base de datos MongoDB
 
@@ -24,7 +26,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
+app.use('/api', router);
 app.set('port', process.env.PORT || 3000);
+
+
 
 app.listen(app.get('port'), ()=>{
     console.log('server on port '+ app.get('port'));
