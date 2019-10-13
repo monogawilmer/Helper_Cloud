@@ -28,13 +28,10 @@ import {
   useLayoutDispatch,
   toggleSidebar,
 } from "../../context/LayoutContext";
+import { SheetsRegistry } from "jss";
 
 const structure = [
   { id: 0, label: "Inicio", link: "/app/dashboard", icon: <HomeIcon /> },
-
-  { id: 1, label: "Registro", link: "/app/registro", icon: <HomeIcon /> },
- 
-  { id: 2, label: "Tablas", link: "/app/tables", icon: <TableIcon /> },
   
   {
     id: 3,
@@ -44,16 +41,11 @@ const structure = [
   },
   {
     id: 4,
-    label: "UI Elements",
-    link: "/app/ui",
+    label: "Listas",
+    link: "/app/ui/list",
     icon: <UIElementsIcon />,
-    children: [
-      { label: "Icons", link: "/app/ui/icons" },
-      { label: "Charts", link: "/app/ui/charts" },
-    ],
   },
-
-  
+ 
 ];
 
 function Sidebar({ location }) {
