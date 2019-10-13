@@ -38,7 +38,7 @@ export default function IconsPage() {
           <Tab label="Administradores" classes={{ root: classes.tab }} />
           <Tab label="Docentes" classes={{ root: classes.tab }} />
           <Tab label="Estudiantes" classes={{ root: classes.tab }} />
-          <Tab label="Asignarutas" classes={{ root: classes.tab }} />
+          <Tab label="Asignaturas" classes={{ root: classes.tab }} />
           <Tab label="Grados" classes={{ root: classes.tab }} />
           <Tab label="Grupos" classes={{ root: classes.tab }} />
         </Tabs>
