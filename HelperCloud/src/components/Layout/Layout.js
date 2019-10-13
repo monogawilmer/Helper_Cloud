@@ -20,7 +20,7 @@ import Typography from "../../pages/typography";
 import Notifications from "../../pages/notifications";
 import Maps from "../../pages/maps";
 import Tables from "../../pages/tables";
-import Icons from "../../pages/icons";
+import List from "../../pages/list";
 import Charts from "../../pages/charts";
 
 // context
@@ -51,10 +51,10 @@ function Layout(props) {
               <Route
                 exact
                 path="/app/ui"
-                render={() => <Redirect to="/app/ui/icons" />}
+                render={() => <Redirect to="/app/ui/list" />}
               />
               <Route path="/app/ui/maps" component={Maps} />
-              <Route path="/app/ui/icons" component={Icons} />
+              <Route path="/app/ui/list" component={List} />
               <Route path="/app/ui/charts" component={Charts} />
             </Switch>
           </div>
