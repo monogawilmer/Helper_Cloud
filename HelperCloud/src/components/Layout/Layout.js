@@ -18,8 +18,6 @@ import Sidebar from "../Sidebar";
 import Dashboard from "../../pages/dashboard";
 import Typography from "../../pages/typography";
 import Notifications from "../../pages/notifications";
-import Maps from "../../pages/maps";
-import Tables from "../../pages/tables";
 import List from "../../pages/list";
 import Charts from "../../pages/charts";
 
@@ -46,14 +44,12 @@ function Layout(props) {
             <Switch>
               <Route path="/app/dashboard" component={Dashboard} />
               <Route path="/app/typography" component={Typography} />
-              <Route path="/app/tables" component={Tables} />
               <Route path="/app/notifications" component={Notifications} />
               <Route
                 exact
                 path="/app/ui"
                 render={() => <Redirect to="/app/ui/list" />}
-              />
-              <Route path="/app/ui/maps" component={Maps} />
+              />              
               <Route path="/app/ui/list" component={List} />
               <Route path="/app/ui/charts" component={Charts} />
             </Switch>

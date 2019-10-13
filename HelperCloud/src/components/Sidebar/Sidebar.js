@@ -28,13 +28,12 @@ import {
   useLayoutDispatch,
   toggleSidebar,
 } from "../../context/LayoutContext";
+import { SheetsRegistry } from "jss";
 
 const structure = [
   { id: 0, label: "Inicio", link: "/app/dashboard", icon: <HomeIcon /> },
 
   { id: 1, label: "Registro", link: "/app/registro", icon: <HomeIcon /> },
- 
-  { id: 2, label: "Tablas", link: "/app/tables", icon: <TableIcon /> },
   
   {
     id: 3,
