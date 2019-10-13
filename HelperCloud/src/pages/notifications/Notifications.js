@@ -14,6 +14,9 @@ import {
   Fade,
 } from "@material-ui/core";
 
+// logo
+import image from "./image.jpg";
+
 // styles
 import "react-toastify/dist/ReactToastify.css";
 import useStyles from "./styles";
@@ -142,12 +145,9 @@ export default function NotificationsPage(props) {
           </Widget>
         </Grid>
 
-        <Grid item xs={12} md={6} lg={4}>
-          <Widget title="Carné" disableWidgetMenu>
-            <Typography>
-              There are few position options available for notifications. You
-              can click any of them to change notifications position:
-            </Typography>
+        <Grid item xs={12} md={12} lg={4} >
+          <Widget disableWidgetMenu>            
+            <img src={image} alt="image" className={classes.logotypeImage} />
           </Widget>
         </Grid>
 
