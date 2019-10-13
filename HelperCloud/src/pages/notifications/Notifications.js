@@ -5,7 +5,6 @@ import { ToastContainer, toast } from "react-toastify";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import classnames from "classnames";
-import MenuItem from '@material-ui/core/MenuItem';
 
 import {
   CircularProgress,
@@ -37,32 +36,8 @@ const positions = [
   toast.POSITION.BOTTOM_RIGHT,
 ];
 
-const currencies = [
-  {
-    value: 'Masculino',
-    label: 'M',
-  },
-  {
-    value: 'Femenino',
-    label: 'F',
-  },
-]
-
-
-
 export default function NotificationsPage(props) {
-  const classes = useStyles();
-  const [values, setValues] = React.useState({
-    name: 'Cat in the Hat',
-    age: '',
-    multiline: 'Controlled',
-    currency: 'EUR',
-  });
-
-  const handleChange = name => event => {
-    setValues({ ...values, [name]: event.target.value });
-  };
-  
+  var classes = useStyles();
 
   // local
   var [notificationsPosition, setNotificationPosition] = useState(2);
@@ -87,7 +62,6 @@ export default function NotificationsPage(props) {
               margin="normal"
               placeholder="Nombres"
               type="text"
-              variant="outlined"
               fullWidth
             />
 
@@ -96,7 +70,6 @@ export default function NotificationsPage(props) {
               margin="normal"
               placeholder="Apellidos"
               type="text"
-              variant="outlined"
               fullWidth
             />
 
@@ -105,102 +78,83 @@ export default function NotificationsPage(props) {
               margin="normal"
               placeholder="Cedula"
               type="text"
-              variant="outlined"
               fullWidth
             />
-          
+
             <TextField
-              id="standard-select-currency"
-              select
-              label="Seleccione"
-              className={classes.textField}
-              value={values.currency}
-              onChange={handleChange('currency')}
-              SelectProps={{
-                MenuProps: {
-                  className: classes.menu,
-                },
-              }}
-              helperText="Por favor seleccione su sexo"
+              id="cedula"
               margin="normal"
-              variant="outlined"
+              placeholder="Sexo"
+              type="text"
               fullWidth
-            >
-              {currencies.map(option => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
-            </TextField>
+            />
 
-          <TextField
-            id="cedula"
-            margin="normal"
-            placeholder="Telefono"
-            type="text"
-            variant="outlined"
-            fullWidth
-          />
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Telefono"
+              type="text"
+              fullWidth
+            />
 
-          <TextField
-            id="cedula"
-            margin="normal"
-            placeholder="Email"
-            type="text"
-            variant="outlined"
-            fullWidth
-          />
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Email"
+              type="text"
+              fullWidth
+            />
 
 
-          <TextField
-            id="cedula"
-            margin="normal"
-            placeholder="Eps"
-            type="text"
-            variant="outlined"
-            fullWidth
-          />
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Eps"
+              type="text"
+              fullWidth
+            />
 
-          <TextField
-            id="cedula"
-            margin="normal"
-            placeholder="Rh"
-            type="text"
-            variant="outlined"
-            fullWidth
-          />
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Rh"
+              type="text"
+              fullWidth
+            />
 
-          <TextField
-            id="cedula"
-            margin="normal"
-            placeholder="Telefono de emergencia"
-            type="text"
-            variant="outlined"
-            fullWidth
-          />
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Telefono de emergencia"
+              type="text"
+              fullWidth
+            />
 
 
-          <div className={classes.formButtons}>
-            <Button className={classes.IniciarButton}
-              variant="contained"
-              color="primary"
-              size="large"
-            >
-              Guardar
+            <div className={classes.formButtons}>
+              <Button className={classes.IniciarButton}
+                variant="contained"
+                color="primary"
+                size="large"
+              >
+                Guardar
               </Button>
 
-          </div>
+            </div>
 
           </Widget>
-      </Grid>
+        </Grid>
 
-      <Grid item xs={12} md={12} lg={4} >
-        <Widget disableWidgetMenu>
-          <img src={image} alt="image" className={classes.logotypeImage} />
-        </Widget>
-      </Grid>
+        <Grid item xs={12} md={12} lg={4} >
+          <Widget disableWidgetMenu>            
+            <img src={image} alt="image" className={classes.logotypeImage} />
+            <Typography variant="h1" className={classes.greeting}>
+                Bienvenido.
+              </Typography>
+          </Widget>
+        </Grid>
 
-    </Grid>
+      </Grid>
     </>
   );
 

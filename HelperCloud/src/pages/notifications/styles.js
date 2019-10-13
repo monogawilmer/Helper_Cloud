@@ -36,7 +36,8 @@ export default makeStyles(theme => ({
       .toHexString(),
   },
   logotypeImage: {
-    width: 330,
+    width: "100%",
+    height: "100%",
   },
   buttonsContainer: {
     display: "flex",
