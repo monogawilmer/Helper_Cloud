@@ -37,7 +37,7 @@ const positions = [
   toast.POSITION.BOTTOM_RIGHT,
 ];
 
-const currencies = [
+const sexo = [
   {
     value: 'Masculino',
     label: 'M',
@@ -48,6 +48,40 @@ const currencies = [
   },
 ]
 
+const rh = [
+  {
+    value: 'O+',
+    label: 'O+',
+  },
+  {
+    value: 'O-',
+    label: 'O-',
+  },
+  {
+    value: 'A+',
+    label: 'A+',
+  },
+  {
+    value: 'A-',
+    label: 'A-',
+  },
+  {
+    value: 'B+',
+    label: 'B+',
+  },
+  {
+    value: 'B-',
+    label: 'B-',
+  },
+  {
+    value: 'AB-',
+    label: 'AB-',
+  },
+  {
+    value: 'AB+',
+    label: 'AB+',
+  },
+]
 
 
 export default function NotificationsPage(props) {
@@ -62,7 +96,7 @@ export default function NotificationsPage(props) {
   const handleChange = name => event => {
     setValues({ ...values, [name]: event.target.value });
   };
-  
+
 
   // local
   var [notificationsPosition, setNotificationPosition] = useState(2);
@@ -108,11 +142,11 @@ export default function NotificationsPage(props) {
               variant="outlined"
               fullWidth
             />
-          
+
             <TextField
               id="standard-select-currency"
               select
-              label="Seleccione"
+              label="Sexo"
               className={classes.textField}
               value={values.currency}
               onChange={handleChange('currency')}
@@ -121,86 +155,100 @@ export default function NotificationsPage(props) {
                   className: classes.menu,
                 },
               }}
-              helperText="Por favor seleccione su sexo"
               margin="normal"
               variant="outlined"
               fullWidth
             >
-              {currencies.map(option => (
+              {sexo.map(option => (
                 <MenuItem key={option.value} value={option.value}>
                   {option.label}
                 </MenuItem>
               ))}
             </TextField>
 
-          <TextField
-            id="cedula"
-            margin="normal"
-            placeholder="Telefono"
-            type="text"
-            variant="outlined"
-            fullWidth
-          />
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Telefono"
+              type="text"
+              variant="outlined"
+              fullWidth
+            />
 
-          <TextField
-            id="cedula"
-            margin="normal"
-            placeholder="Email"
-            type="text"
-            variant="outlined"
-            fullWidth
-          />
-
-
-          <TextField
-            id="cedula"
-            margin="normal"
-            placeholder="Eps"
-            type="text"
-            variant="outlined"
-            fullWidth
-          />
-
-          <TextField
-            id="cedula"
-            margin="normal"
-            placeholder="Rh"
-            type="text"
-            variant="outlined"
-            fullWidth
-          />
-
-          <TextField
-            id="cedula"
-            margin="normal"
-            placeholder="Telefono de emergencia"
-            type="text"
-            variant="outlined"
-            fullWidth
-          />
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Email"
+              type="text"
+              variant="outlined"
+              fullWidth
+            />
 
 
-          <div className={classes.formButtons}>
-            <Button className={classes.IniciarButton}
-              variant="contained"
-              color="primary"
-              size="large"
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Eps"
+              type="text"
+              variant="outlined"
+              fullWidth
+            />
+
+            <TextField
+              id="standard-select-currency"
+              select
+              label="G.S. RH"
+              className={classes.textField}
+              value={values.currency}
+              onChange={handleChange('currency')}
+              SelectProps={{
+                MenuProps: {
+                  className: classes.menu,
+                },
+              }}
+              margin="normal"
+              variant="outlined"
+              fullWidth
             >
-              Guardar
+              {rh.map(option => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
+
+
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Telefono de emergencia"
+              type="text"
+              variant="outlined"
+              fullWidth
+            />
+
+
+            <div className={classes.formButtons}>
+              <Button className={classes.IniciarButton}
+                variant="contained"
+                color="primary"
+                size="large"
+              >
+                Guardar
               </Button>
 
-          </div>
+            </div>
 
           </Widget>
-      </Grid>
+        </Grid>
 
-      <Grid item xs={12} md={12} lg={4} >
-        <Widget disableWidgetMenu>
-          <img src={image} alt="image" className={classes.logotypeImage} />
-        </Widget>
-      </Grid>
+        <Grid item xs={12} md={12} lg={4} >
+          <Widget disableWidgetMenu>
+            <img src={image} alt="image" className={classes.logotypeImage} />
+          </Widget>
+        </Grid>
 
-    </Grid>
+      </Grid>
     </>
   );
 
