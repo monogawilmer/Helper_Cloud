@@ -179,7 +179,6 @@ export default function NotificationsPage(props) {
               id="cedula"
               margin="normal"
               className={classes.textField}
-              onChange={handleChange('name')}
               label="Email"
               type="text"
               variant="outlined"
