@@ -35,6 +35,9 @@ export default makeStyles(theme => ({
       .darken()
       .toHexString(),
   },
+  logotypeImage: {
+    width: 330,
+  },
   buttonsContainer: {
     display: "flex",
     flexDirection: "column",
