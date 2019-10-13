@@ -70,7 +70,75 @@ export default function NotificationsPage(props) {
               fullWidth
             />
 
-            
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Cedula"
+              type="text"
+              fullWidth
+            />
+
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Sexo"
+              type="text"
+              fullWidth
+            />
+
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Telefono"
+              type="text"
+              fullWidth
+            />
+
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Email"
+              type="text"
+              fullWidth
+            />
+
+
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Eps"
+              type="text"
+              fullWidth
+            />
+
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Rh"
+              type="text"
+              fullWidth
+            />
+
+            <TextField
+              id="cedula"
+              margin="normal"
+              placeholder="Telefono de emergencia"
+              type="text"
+              fullWidth
+            />
+
+
+            <div className={classes.formButtons}>
+              <Button className={classes.IniciarButton}
+                variant="contained"
+                color="primary"
+                size="large"
+              >
+                Guardar
+              </Button>
+
+            </div>
+
           </Widget>
         </Grid>
 
