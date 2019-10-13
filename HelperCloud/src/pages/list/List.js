@@ -14,8 +14,6 @@ import useStyles from "./styles";
 
 // components
 
-
-
 // icons sets
 import "font-awesome/css/font-awesome.min.css";
 

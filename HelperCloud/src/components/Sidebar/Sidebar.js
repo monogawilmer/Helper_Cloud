@@ -38,6 +38,11 @@ const structure = [
     label: "Notifications",
     link: "/app/notifications",
     icon: <NotificationsIcon />,
+    children: [
+      { label: "Administradores", link: "/app/notifications" },
+      { label: "Docentes", link: "/app/ui/charts" },
+      { label: "Estudiantes", link: "/app/ui/charts" },
+    ],
   },
   {
     id: 4,
