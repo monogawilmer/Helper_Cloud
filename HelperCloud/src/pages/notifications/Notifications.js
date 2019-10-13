@@ -119,7 +119,7 @@ export default function NotificationsPage(props) {
             <TextField
               id="nombre"
               margin="normal"
-              placeholder="Nombres"
+              label="Nombres"
               type="text"
               variant="outlined"
               fullWidth
@@ -128,7 +128,7 @@ export default function NotificationsPage(props) {
             <TextField
               id="apellido"
               margin="normal"
-              placeholder="Apellidos"
+              label="Apellidos"
               type="text"
               variant="outlined"
               fullWidth
@@ -137,7 +137,7 @@ export default function NotificationsPage(props) {
             <TextField
               id="cedula"
               margin="normal"
-              placeholder="Cedula"
+              label="Cedula"
               type="text"
               variant="outlined"
               fullWidth
@@ -169,7 +169,7 @@ export default function NotificationsPage(props) {
             <TextField
               id="cedula"
               margin="normal"
-              placeholder="Telefono"
+              label="Telefono"
               type="text"
               variant="outlined"
               fullWidth
@@ -178,7 +178,9 @@ export default function NotificationsPage(props) {
             <TextField
               id="cedula"
               margin="normal"
-              placeholder="Email"
+              className={classes.textField}
+              onChange={handleChange('name')}
+              label="Email"
               type="text"
               variant="outlined"
               fullWidth
@@ -188,7 +190,7 @@ export default function NotificationsPage(props) {
             <TextField
               id="cedula"
               margin="normal"
-              placeholder="Eps"
+              label="Eps"
               type="text"
               variant="outlined"
               fullWidth
@@ -221,7 +223,7 @@ export default function NotificationsPage(props) {
             <TextField
               id="cedula"
               margin="normal"
-              placeholder="Telefono de emergencia"
+              label="Telefono de emergencia"
               type="text"
               variant="outlined"
               fullWidth
