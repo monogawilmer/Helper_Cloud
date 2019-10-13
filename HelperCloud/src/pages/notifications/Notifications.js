@@ -148,6 +148,9 @@ export default function NotificationsPage(props) {
         <Grid item xs={12} md={12} lg={4} >
           <Widget disableWidgetMenu>            
             <img src={image} alt="image" className={classes.logotypeImage} />
+            <Typography variant="h1" className={classes.greeting}>
+                Bienvenido.
+              </Typography>
           </Widget>
         </Grid>
 
