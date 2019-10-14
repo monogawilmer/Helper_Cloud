@@ -178,6 +178,17 @@ export default function NotificationsPage(props) {
             <TextField
               id="cedula"
               margin="normal"
+              className={classes.textField}
+              label="Email"
+              type="text"
+              variant="outlined"
+              fullWidth
+            />
+
+
+            <TextField
+              id="cedula"
+              margin="normal"
               label="Eps"
               type="text"
               variant="outlined"
