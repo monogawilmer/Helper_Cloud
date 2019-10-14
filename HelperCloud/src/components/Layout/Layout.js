@@ -20,6 +20,7 @@ import Typography from "../../pages/typography";
 import Notifications from "../../pages/notifications";
 import List from "../../pages/list";
 import Charts from "../../pages/charts";
+import Docentes from "../../pages/docentes";
 
 // context
 import { useLayoutState } from "../../context/LayoutContext";
@@ -51,6 +52,7 @@ function Layout(props) {
                 render={() => <Redirect to="/app/ui/list" />}
               />              
               <Route path="/app/ui/list" component={List} />
+              <Route path="/app/ui/docentes" component={Docentes} />
               <Route path="/app/ui/charts" component={Charts} />
             </Switch>
           </div>

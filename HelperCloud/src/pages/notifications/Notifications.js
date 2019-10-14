@@ -15,9 +15,6 @@ import {
   Fade,
 } from "@material-ui/core";
 
-// logo
-import image from "./image.jpg";
-
 // styles
 import "react-toastify/dist/ReactToastify.css";
 import useStyles from "./styles";
@@ -104,7 +101,7 @@ export default function NotificationsPage(props) {
 
   return (
     <>
-      <PageTitle title="Notifications" />
+      <PageTitle title="Administrador" />
       <Grid container spacing={8}>
         <ToastContainer
           className={classes.toastsContainer}
@@ -249,12 +246,6 @@ export default function NotificationsPage(props) {
 
             </div>
 
-          </Widget>
-        </Grid>
-
-        <Grid item xs={8} md={4} lg={4} >
-          <Widget disableWidgetMenu>
-            <img src={image} alt="image" className={classes.logotypeImage} />
           </Widget>
         </Grid>
 

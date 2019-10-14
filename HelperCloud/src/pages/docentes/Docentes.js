@@ -29,14 +29,6 @@ const sexo = [
   },
 ]
 
-const grado = [
-
-]
-
-const grupo = [
-
-]
-
 const rh = [
   {
     value: 'O+',
@@ -72,7 +64,7 @@ const rh = [
   },
 ]
 
-export default function Charts(props) {
+export default function Docentes(props) {
   const classes = useStyles();
   var theme = useTheme();
   const [values, setValues] = React.useState({
@@ -91,7 +83,7 @@ export default function Charts(props) {
 
   return (
     <>
-      <PageTitle title="Estudiantes" />
+      <PageTitle title="Docentes" />
       <Grid container spacing={8}>
         <ToastContainer
           className={classes.toastsContainer}
@@ -194,90 +186,14 @@ export default function Charts(props) {
               ))}
             </TextField>
 
-            <TextField
-              id="standard-select-currency"
-              select
-              label="Grado"
-              className={classes.textField}
-              value={values.currency}
-              onChange={handleChange('currency')}
-              SelectProps={{
-                MenuProps: {
-                  className: classes.menu,
-                },
-              }}
-              margin="normal"
-              variant="outlined"
-              fullWidth
-            >
-              {grado.map(option => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
-            </TextField>
-
-            <TextField
-              id="standard-select-currency"
-              select
-              label="Grupo"
-              className={classes.textField}
-              value={values.currency}
-              onChange={handleChange('currency')}
-              SelectProps={{
-                MenuProps: {
-                  className: classes.menu,
-                },
-              }}
-              margin="normal"
-              variant="outlined"
-              fullWidth
-            >
-              {grupo.map(option => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
-            </TextField>
+            
+            
 
 
             <TextField
               id="cedula"
               margin="normal"
               label="Telefono de emergencia"
-              type="text"
-              variant="outlined"
-              fullWidth
-            />
-
-            <TextField
-              id="cedula"
-              margin="normal"
-              className={classes.textField}
-              onChange={handleChange('name')}
-              label="Email acudiente"
-              type="text"
-              variant="outlined"
-              fullWidth
-            />
-
-            <TextField
-              id="cedula"
-              margin="normal"
-              className={classes.textField}
-              onChange={handleChange('name')}
-              label="Nombre acudiente"
-              type="text"
-              variant="outlined"
-              fullWidth
-            />
-
-            <TextField
-              id="cedula"
-              margin="normal"
-              className={classes.textField}
-              onChange={handleChange('name')}
-              label="Parentesco"
               type="text"
               variant="outlined"
               fullWidth
@@ -293,9 +209,6 @@ export default function Charts(props) {
               </Button>
 
             </div>
-
-
-
 
           </Widget >
         </Grid>
