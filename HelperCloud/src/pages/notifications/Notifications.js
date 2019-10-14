@@ -178,18 +178,6 @@ export default function NotificationsPage(props) {
             <TextField
               id="cedula"
               margin="normal"
-              className={classes.textField}
-              onChange={handleChange('name')}
-              label="Email"
-              type="text"
-              variant="outlined"
-              fullWidth
-            />
-
-
-            <TextField
-              id="cedula"
-              margin="normal"
               label="Eps"
               type="text"
               variant="outlined"
@@ -219,7 +207,6 @@ export default function NotificationsPage(props) {
               ))}
             </TextField>
 
-
             <TextField
               id="cedula"
               margin="normal"
@@ -229,6 +216,16 @@ export default function NotificationsPage(props) {
               fullWidth
             />
 
+            <TextField
+              id="cedula"
+              margin="normal"
+              className={classes.textField}
+              onChange={handleChange('name')}
+              label="Email"
+              type="text"
+              variant="outlined"
+              fullWidth
+            />
 
             <div className={classes.formButtons}>
               <Button className={classes.IniciarButton}
@@ -244,7 +241,7 @@ export default function NotificationsPage(props) {
           </Widget>
         </Grid>
 
-        <Grid item xs={12} md={12} lg={4} >
+        <Grid item xs={8} md={4} lg={4} >
           <Widget disableWidgetMenu>
             <img src={image} alt="image" className={classes.logotypeImage} />
           </Widget>

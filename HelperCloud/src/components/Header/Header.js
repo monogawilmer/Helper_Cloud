@@ -223,7 +223,7 @@ export default function Header(props) {
           {notifications.map(notification => (
             <MenuItem
               key={notification.id}
-              onClick={() => setNotificationsMenu(null)}
+              
               className={classes.headerMenuItem}
             >
               <Notification {...notification} typographyVariant="inherit" />
