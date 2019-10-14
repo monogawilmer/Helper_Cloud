@@ -21,6 +21,9 @@ import Notifications from "../../pages/notifications";
 import List from "../../pages/list";
 import Charts from "../../pages/charts";
 import Docentes from "../../pages/docentes";
+import Asignaturas from "../../pages/asignaturas";
+import Grados from "../../pages/grados";
+import Grupos from "../../pages/grupos";
 
 // context
 import { useLayoutState } from "../../context/LayoutContext";
@@ -54,6 +57,9 @@ function Layout(props) {
               <Route path="/app/ui/list" component={List} />
               <Route path="/app/ui/docentes" component={Docentes} />
               <Route path="/app/ui/charts" component={Charts} />
+              <Route path="/app/ui/asignaturas" component={Asignaturas} />
+              <Route path="/app/ui/grados" component={Grados} />
+              <Route path="/app/ui/grupos" component={Grupos} />
             </Switch>
           </div>
         </>

@@ -41,6 +41,9 @@ const structure = [
       { label: "Administradores", link: "/app/notifications" },
       { label: "Docentes", link: "/app/ui/docentes" },
       { label: "Estudiantes", link: "/app/ui/charts" },
+      { label: "Asignaturas", link: "/app/ui/asignaturas" },
+      { label: "Grados", link: "/app/ui/grados" },
+      { label: "Grupos", link: "/app/ui/grupos" },
     ],
   },
   {
