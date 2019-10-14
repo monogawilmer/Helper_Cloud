@@ -7,12 +7,16 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import PageTitle from "../../components/PageTitle/PageTitle";
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 //imagenes cards
 import administrador from "./administrador.jpg";
 import docentes from "./docente.jpg";
 import estudiante from "./estudiante.jpg";
 import asignatura from "./asignaturas.jpg"
+
+//rutas
+import regDocentes from "../docentes/Docentes"
 
 const useStyles = makeStyles({
   card: {
@@ -28,126 +32,136 @@ export default function MediaCard() {
 
   return (
     <>
-    <PageTitle title="Registrar" />
+      <PageTitle title="Registrar" />
 
-    <Grid container spacing={5}>
-      <Grid item xs={12} md={12} lg={4}>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={administrador}
-              title="Contemplative Reptile"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Administradores
+      <Grid container spacing={5}>
+        <Grid item xs={12} md={12} lg={4}>
+          <Card className={classes.card}>
+            <Link to={"/app/notifications"}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={administrador}
+                  title="Registro administradores"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Administradores
+          </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Link>
+          </Card>
+        </Grid >
+
+
+        <Grid item xs={12} md={12} lg={4}>
+          <Card className={classes.card}>
+            <Link to={"/app/ui/docentes"}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={docentes}
+                  title="Registro docentes"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Docentes
+          </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Link>
+          </Card>
+        </Grid >
+
+
+
+        <Grid item xs={12} md={12} lg={4}>
+          <Card className={classes.card}>
+            <Link to={"/app/ui/charts"}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={estudiante}
+                  title="Registro estudiantes"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Estudiantes
           </Typography>
 
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </Grid >
+                </CardContent>
+              </CardActionArea>
+            </Link>
+          </Card>
+        </Grid >
 
 
-      <Grid item xs={12} md={12} lg={4}>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={docentes}
-              title="Contemplative Reptile"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Docentes
+
+        <Grid item xs={12} md={12} lg={4}>
+          <Card className={classes.card}>
+            <Link to={"/app/ui/grados"}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image="/static/images/cards/contemplative-reptile.jpg"
+                  title="Registro grados"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Grados
           </Typography>
 
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </Grid >
+                </CardContent>
+              </CardActionArea>
+            </Link>
+          </Card>
+        </Grid >
 
 
 
-      <Grid item xs={12} md={12} lg={4}>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={estudiante}
-              title="Contemplative Reptile"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Estudiantes
+        <Grid item xs={12} md={12} lg={4}>
+          <Card className={classes.card}>
+            <Link to={"/app/ui/grupos"}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image="/static/images/cards/contemplative-reptile.jpg"
+                  title="Registo grupos"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Grupos
           </Typography>
 
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </Grid >
+                </CardContent>
+              </CardActionArea>
+            </Link>
+          </Card>
+        </Grid >
 
 
 
-      <Grid item xs={12} md={12} lg={4}>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image="/static/images/cards/contemplative-reptile.jpg"
-              title="Contemplative Reptile"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Grados
+        <Grid item xs={12} md={12} lg={4}>
+          <Card className={classes.card}>
+            <Link to={"/app/ui/asignaturas"}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={asignatura}
+                  title="Registro asignaturas"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Asignaturas
           </Typography>
 
-            </CardContent>
-          </CardActionArea>
-        </Card>
+                </CardContent>
+              </CardActionArea>
+            </Link>
+          </Card>
+        </Grid >
       </Grid >
-
-
-
-      <Grid item xs={12} md={12} lg={4}>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image="/static/images/cards/contemplative-reptile.jpg"
-              title="Contemplative Reptile"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Grupos
-          </Typography>
-
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </Grid >
-
-
-
-      <Grid item xs={12} md={12} lg={4}>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={asignatura}
-              title="Contemplative Reptile"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Asignaturas
-          </Typography>
-
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </Grid >
-    </Grid >
     </>
   );
 }
