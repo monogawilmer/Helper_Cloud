@@ -1,10 +1,9 @@
-import express from 'express';
-import morgan from 'morgan';
-import cors from 'cors';
-import path, { dirname } from 'path';
-import mongoose from 'mongoose';
-import router from './routes';
-
+var express = require('express');
+var morgan = require('morgan');
+var cors = require('cors');
+var path = require('path');
+var mongoose = require('mongoose');
+var router = require('express-promise-router');
 
 //conexion a la base de datos MongoDB
 
