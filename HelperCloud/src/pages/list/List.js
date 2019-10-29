@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  Typography,
   Grid,
   Tabs,
   Tab,

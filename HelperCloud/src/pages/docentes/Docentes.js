@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Card } from "@material-ui/core";
 import { ToastContainer, toast } from "react-toastify";
 import { useTheme } from "@material-ui/styles";
 import { Close as CloseIcon } from "@material-ui/icons";
@@ -186,8 +186,8 @@ export default function Docentes(props) {
               ))}
             </TextField>
 
-            
-            
+
+
 
 
             <TextField
@@ -211,6 +211,18 @@ export default function Docentes(props) {
             </div>
 
           </Widget >
+        </Grid>
+        <Grid item xs={12} md={12} lg={7}>
+          <Card>
+            <h1>Subir foto</h1>
+            <form method="post" action="upload" enctype="multipart/form-data">
+              <fieldset>
+                <legend>Formulario de subida</legend>
+                <input type="file" name="files" id="files" multiple />
+              </fieldset>
+            </form>
+          </Card>
+
         </Grid>
       </Grid>
     </>

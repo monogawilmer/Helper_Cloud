@@ -8,8 +8,11 @@ import {
   Tab,
   TextField,
   Fade,
+  Link,
 } from "@material-ui/core";
 import { withRouter } from "react-router-dom";
+
+import QrReader from 'react-qr-reader';
 
 
 // styles
@@ -21,6 +24,9 @@ import qr from "../../images/qr.png";
 
 // context
 import { useUserDispatch, loginUser } from "../../context/UserContext";
+
+
+
 
 function Login(props) {
   var classes = useStyles();
@@ -36,11 +42,12 @@ function Login(props) {
   var [loginValue, setLoginValue] = useState("");
   var [passwordValue, setPasswordValue] = useState("");
 
+
   return (
     <Grid container className={classes.container}>
       <div className={classes.logotypeContainer}>
         <img src={logo} alt="logo" className={classes.logotypeImage} />
-        <Typography  variant="h1" className={classes.logotypeText}>HelperCloud</Typography>
+        <Typography variant="h1" className={classes.logotypeText}>HelperCloud</Typography>
       </div>
       <div className={classes.formContainer}>
         <div className={classes.form}>
@@ -52,17 +59,20 @@ function Login(props) {
             centered
           >
             <Tab label="Iniciar sesión" classes={{ root: classes.tab }} />
-            
+
           </Tabs>
           {activeTabId === 0 && (
             <React.Fragment>
               <Typography variant="h1" className={classes.greeting}>
                 Bienvenido.
               </Typography>
-              <Button size="large" className={classes.googleButton}>
-                <img src={qr} alt="qr" className={classes.googleIcon} />
-                &nbsp;Iniciar con codigo QR.
+              <Link to={"/app/ui/qr"}>
+                <Button size="large" className={classes.googleButton}>
+                  <img src={qr} alt="qr" className={classes.googleIcon} />
+                  &nbsp;Iniciar con codigo QR.
               </Button>
+              </Link>
+
               <div className={classes.formDividerContainer}>
                 <div className={classes.formDivider} />
                 <Typography className={classes.formDividerWord}>o</Typography>
@@ -107,32 +117,32 @@ function Login(props) {
                 {isLoading ? (
                   <CircularProgress size={26} className={classes.loginLoader} />
                 ) : (
-                  <Button className={classes.IniciarButton}
-                    disabled={
-                      loginValue.length === 0 || passwordValue.length === 0
-                    }
-                    onClick={() =>
-                      loginUser(
-                        userDispatch,
-                        loginValue,
-                        passwordValue,
-                        props.history,
-                        setIsLoading,
-                        setError,
-                      )
-                    }
-                    variant="contained"
-                    color="primary"
-                    size="large"
-                  >
-                    Iniciar
+                    <Button className={classes.IniciarButton}
+                      disabled={
+                        loginValue.length === 0 || passwordValue.length === 0
+                      }
+                      onClick={() =>
+                        loginUser(
+                          userDispatch,
+                          loginValue,
+                          passwordValue,
+                          props.history,
+                          setIsLoading,
+                          setError,
+                        )
+                      }
+                      variant="contained"
+                      color="primary"
+                      size="large"
+                    >
+                      Iniciar
                   </Button>
-                )}
-                
+                  )}
+
               </div>
             </React.Fragment>
           )}
-        </div>       
+        </div>
       </div>
     </Grid>
   );
