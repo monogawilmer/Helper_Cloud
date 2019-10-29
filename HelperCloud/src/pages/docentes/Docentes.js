@@ -187,9 +187,6 @@ export default function Docentes(props) {
             </TextField>
 
 
-
-
-
             <TextField
               id="cedula"
               margin="normal"
@@ -198,6 +195,18 @@ export default function Docentes(props) {
               variant="outlined"
               fullWidth
             />
+
+            <form method="post" action="upload" enctype="multipart/form-data" >
+              <fieldset>
+                <legend>Subir Foto</legend>
+                <input type="file" name="files" id="files" multiple />
+              </fieldset>
+            </form>
+
+            <br>
+            
+            </br>
+
 
             <div className={classes.formButtons}>
               <Button className={classes.IniciarButton}
@@ -210,19 +219,12 @@ export default function Docentes(props) {
 
             </div>
 
+            
+
           </Widget >
         </Grid>
         <Grid item xs={12} md={12} lg={7}>
-          <Card>
-            <h1>Subir foto</h1>
-            <form method="post" action="upload" enctype="multipart/form-data">
-              <fieldset>
-                <legend>Formulario de subida</legend>
-                <input type="file" name="files" id="files" multiple />
-              </fieldset>
-            </form>
-          </Card>
-
+          
         </Grid>
       </Grid>
     </>

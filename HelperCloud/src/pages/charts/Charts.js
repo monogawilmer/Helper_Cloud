@@ -283,6 +283,18 @@ export default function Charts(props) {
               fullWidth
             />
 
+            <form method="post" action="upload" enctype="multipart/form-data" >
+              <fieldset>
+                <legend>Subir Foto</legend>
+                <input type="file" name="files" id="files" multiple />
+              </fieldset>
+            </form>
+
+            <br>
+            
+            </br>
+
+
             <div className={classes.formButtons}>
               <Button className={classes.IniciarButton}
                 variant="contained"

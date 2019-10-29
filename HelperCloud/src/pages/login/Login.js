@@ -12,8 +12,6 @@ import {
 } from "@material-ui/core";
 import { withRouter } from "react-router-dom";
 
-import QrReader from 'react-qr-reader';
-
 
 // styles
 import useStyles from "./styles";
