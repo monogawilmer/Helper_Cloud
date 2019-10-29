@@ -13,7 +13,9 @@ import { Link } from 'react-router-dom';
 import administrador from "./administrador.jpg";
 import docentes from "./docente.jpg";
 import estudiante from "./estudiante.jpg";
-import asignatura from "./asignaturas.jpg"
+import asignatura from "./asignaturas.jpg";
+import grados from "./grados.jpg";
+import grupos from "./grupos.jpg";
 
 //rutas
 import regDocentes from "../docentes/Docentes"
@@ -104,7 +106,7 @@ export default function MediaCard() {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="/static/images/cards/contemplative-reptile.jpg"
+                  image={grados}
                   title="Registro grados"
                 />
                 <CardContent>
@@ -126,7 +128,7 @@ export default function MediaCard() {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="/static/images/cards/contemplative-reptile.jpg"
+                  image={grupos}
                   title="Registo grupos"
                 />
                 <CardContent>
